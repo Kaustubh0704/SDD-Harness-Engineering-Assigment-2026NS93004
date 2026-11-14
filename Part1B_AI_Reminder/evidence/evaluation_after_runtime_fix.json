@@ -1,0 +1,426 @@
+{
+    "timestamp": "2026-11-14T19:47:09.195976",
+    "model": "openai/gpt-oss-20b",
+    "total_cases": 15,
+    "passed": 11,
+    "failed": 4,
+    "pass_rate": 73.33,
+    "results": [
+        {
+            "id": "TC001",
+            "input": "Remind me to submit my assignment tomorrow at 9 PM",
+            "expected": {
+                "action": "create",
+                "date": "2026-11-15",
+                "time": "21:00",
+                "status": "scheduled",
+                "duration_minutes": null
+            },
+            "actual": {
+                "action": "create",
+                "title": "submit my assignment",
+                "date": "2026-11-15",
+                "time": "21:00",
+                "status": "scheduled",
+                "missing_fields": [],
+                "duration_minutes": null,
+                "clarification_question": null
+            },
+            "schema_valid": true,
+            "checks": {
+                "action": true,
+                "date": true,
+                "time": true,
+                "status": true,
+                "duration_minutes": true
+            },
+            "passed": true
+        },
+        {
+            "id": "TC002",
+            "input": "Remind me to attend the meeting on 20 November 2026 at 10 AM",
+            "expected": {
+                "action": "create",
+                "date": "2026-11-20",
+                "time": "10:00",
+                "status": "scheduled",
+                "duration_minutes": null
+            },
+            "actual": {
+                "action": "create",
+                "title": "attend the meeting",
+                "date": "2026-11-20",
+                "time": "10:00",
+                "status": "scheduled",
+                "missing_fields": [],
+                "duration_minutes": null,
+                "clarification_question": null
+            },
+            "schema_valid": true,
+            "checks": {
+                "action": true,
+                "date": true,
+                "time": true,
+                "status": true,
+                "duration_minutes": true
+            },
+            "passed": true
+        },
+        {
+            "id": "TC003",
+            "input": "Remind me to call my friend",
+            "expected": {
+                "action": "create",
+                "date": null,
+                "time": null,
+                "status": "needs_clarification",
+                "duration_minutes": null
+            },
+            "actual": {
+                "action": "create",
+                "title": "call my friend",
+                "date": null,
+                "time": null,
+                "status": "needs_clarification",
+                "missing_fields": [
+                    "date",
+                    "time"
+                ],
+                "duration_minutes": null,
+                "clarification_question": "When would you like to set the reminder?"
+            },
+            "schema_valid": true,
+            "checks": {
+                "action": true,
+                "date": true,
+                "time": true,
+                "status": true,
+                "duration_minutes": true
+            },
+            "passed": true
+        },
+        {
+            "id": "TC004",
+            "input": "Remind me to pay my electricity bill today at 8 PM",
+            "expected": {
+                "action": "create",
+                "date": "2026-11-14",
+                "time": "20:00",
+                "status": "scheduled",
+                "duration_minutes": null
+            },
+            "actual": {
+                "action": "create",
+                "title": "pay my electricity bill",
+                "date": "2026-11-14",
+                "time": "20:00",
+                "status": "scheduled",
+                "missing_fields": [],
+                "duration_minutes": null,
+                "clarification_question": null
+            },
+            "schema_valid": true,
+            "checks": {
+                "action": true,
+                "date": true,
+                "time": true,
+                "status": true,
+                "duration_minutes": true
+            },
+            "passed": true
+        },
+        {
+            "id": "TC005",
+            "input": "Remind me to exercise tomorrow morning",
+            "expected": {
+                "action": "create",
+                "date": "2026-11-15",
+                "time": null,
+                "status": "needs_clarification",
+                "duration_minutes": null
+            },
+            "actual": {
+                "action": "create",
+                "title": "exercise",
+                "date": "2026-11-15",
+                "time": null,
+                "status": "needs_clarification",
+                "missing_fields": [
+                    "time"
+                ],
+                "duration_minutes": null,
+                "clarification_question": "What time would you like to exercise tomorrow morning?"
+            },
+            "schema_valid": true,
+            "checks": {
+                "action": true,
+                "date": true,
+                "time": true,
+                "status": true,
+                "duration_minutes": true
+            },
+            "passed": true
+        },
+        {
+            "id": "TC006",
+            "input": "Remind me to submit the report on 25 November 2026 at 3 PM",
+            "expected": {
+                "action": "create",
+                "date": "2026-11-25",
+                "time": "15:00",
+                "status": "scheduled",
+                "duration_minutes": null
+            },
+            "actual": {
+                "action": "create",
+                "title": "submit the report",
+                "date": "2026-11-25",
+                "time": "15:00",
+                "status": "scheduled",
+                "missing_fields": [],
+                "duration_minutes": null,
+                "clarification_question": null
+            },
+            "schema_valid": true,
+            "checks": {
+                "action": true,
+                "date": true,
+                "time": true,
+                "status": true,
+                "duration_minutes": true
+            },
+            "passed": true
+        },
+        {
+            "id": "TC007",
+            "input": "Remind me to take medicine tomorrow at 7 AM",
+            "expected": {
+                "action": "create",
+                "date": "2026-11-15",
+                "time": "07:00",
+                "status": "scheduled",
+                "duration_minutes": null
+            },
+            "actual": {
+                "action": "create",
+                "title": "take medicine",
+                "date": "2026-11-15",
+                "time": "07:00",
+                "status": "scheduled",
+                "missing_fields": [],
+                "duration_minutes": null,
+                "clarification_question": null
+            },
+            "schema_valid": true,
+            "checks": {
+                "action": true,
+                "date": true,
+                "time": true,
+                "status": true,
+                "duration_minutes": true
+            },
+            "passed": true
+        },
+        {
+            "id": "TC008",
+            "input": "Remind me to buy groceries at 6 PM",
+            "expected": {
+                "action": "create",
+                "date": null,
+                "time": "18:00",
+                "status": "needs_clarification",
+                "duration_minutes": null
+            },
+            "actual": {
+                "action": "create",
+                "title": "buy groceries",
+                "date": "2026-11-15",
+                "time": "18:00",
+                "status": "scheduled",
+                "missing_fields": [],
+                "duration_minutes": null,
+                "clarification_question": null
+            },
+            "schema_valid": true,
+            "checks": {
+                "action": true,
+                "date": false,
+                "time": true,
+                "status": false,
+                "duration_minutes": true
+            },
+            "passed": false
+        },
+        {
+            "id": "TC009",
+            "input": "Remind me to attend the workshop next Friday at 11 AM",
+            "expected": {
+                "action": "create",
+                "date": "2026-11-20",
+                "time": "11:00",
+                "status": "scheduled",
+                "duration_minutes": null
+            },
+            "actual": null,
+            "schema_valid": false,
+            "checks": {},
+            "passed": false,
+            "error": "ValueError: AI returned an empty response. Finish reason: length. Token usage: CompletionUsage(completion_tokens=500, prompt_tokens=448, total_tokens=948, completion_time=0.614985827, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=498), prompt_time=0.0469417, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.047229137, total_time=0.661927527)"
+        },
+        {
+            "id": "TC010",
+            "input": "Remind me to pay rent on 1 December 2026 at 9 AM",
+            "expected": {
+                "action": "create",
+                "date": "2026-12-01",
+                "time": "09:00",
+                "status": "scheduled",
+                "duration_minutes": null
+            },
+            "actual": {
+                "action": "create",
+                "title": "pay rent",
+                "date": "2026-12-01",
+                "time": "09:00",
+                "status": "scheduled",
+                "missing_fields": [],
+                "duration_minutes": null,
+                "clarification_question": null
+            },
+            "schema_valid": true,
+            "checks": {
+                "action": true,
+                "date": true,
+                "time": true,
+                "status": true,
+                "duration_minutes": true
+            },
+            "passed": true
+        },
+        {
+            "id": "TC011",
+            "input": "Move my assignment reminder to 22 November 2026 at 10 AM",
+            "expected": {
+                "action": "reschedule",
+                "date": "2026-11-22",
+                "time": "10:00",
+                "status": "scheduled",
+                "duration_minutes": null
+            },
+            "actual": {
+                "action": "reschedule",
+                "title": "assignment",
+                "date": "2026-11-22",
+                "time": "10:00",
+                "status": "scheduled",
+                "missing_fields": [],
+                "duration_minutes": null,
+                "clarification_question": null
+            },
+            "schema_valid": true,
+            "checks": {
+                "action": true,
+                "date": true,
+                "time": true,
+                "status": true,
+                "duration_minutes": true
+            },
+            "passed": true
+        },
+        {
+            "id": "TC012",
+            "input": "Reschedule my dentist reminder to tomorrow at 4 PM",
+            "expected": {
+                "action": "reschedule",
+                "date": "2026-11-15",
+                "time": "16:00",
+                "status": "scheduled",
+                "duration_minutes": null
+            },
+            "actual": {
+                "action": "reschedule",
+                "title": "dentist reminder",
+                "date": "2026-11-15",
+                "time": "16:00",
+                "status": "scheduled",
+                "missing_fields": [],
+                "duration_minutes": null,
+                "clarification_question": null
+            },
+            "schema_valid": true,
+            "checks": {
+                "action": true,
+                "date": true,
+                "time": true,
+                "status": true,
+                "duration_minutes": true
+            },
+            "passed": true
+        },
+        {
+            "id": "TC013",
+            "input": "Snooze my meeting reminder for 30 minutes",
+            "expected": {
+                "action": "snooze",
+                "date": null,
+                "time": null,
+                "status": "needs_clarification",
+                "duration_minutes": 30
+            },
+            "actual": null,
+            "schema_valid": false,
+            "checks": {},
+            "passed": false,
+            "error": "ValueError: AI returned an empty response. Finish reason: length. Token usage: CompletionUsage(completion_tokens=500, prompt_tokens=444, total_tokens=944, completion_time=0.594713371, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=498), prompt_time=0.011826749, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.318762018, total_time=0.60654012)"
+        },
+        {
+            "id": "TC014",
+            "input": "Snooze my medication reminder for one hour",
+            "expected": {
+                "action": "snooze",
+                "date": null,
+                "time": null,
+                "status": "needs_clarification",
+                "duration_minutes": 60
+            },
+            "actual": null,
+            "schema_valid": false,
+            "checks": {},
+            "passed": false,
+            "error": "ValueError: AI returned invalid JSON"
+        },
+        {
+            "id": "TC015",
+            "input": "Remind me to complete my project",
+            "expected": {
+                "action": "create",
+                "date": null,
+                "time": null,
+                "status": "needs_clarification",
+                "duration_minutes": null
+            },
+            "actual": {
+                "action": "create",
+                "title": "complete my project",
+                "date": null,
+                "time": null,
+                "status": "needs_clarification",
+                "missing_fields": [
+                    "date",
+                    "time"
+                ],
+                "duration_minutes": null,
+                "clarification_question": "What date and time would you like to set for the reminder?"
+            },
+            "schema_valid": true,
+            "checks": {
+                "action": true,
+                "date": true,
+                "time": true,
+                "status": true,
+                "duration_minutes": true
+            },
+            "passed": true
+        }
+    ]
+}

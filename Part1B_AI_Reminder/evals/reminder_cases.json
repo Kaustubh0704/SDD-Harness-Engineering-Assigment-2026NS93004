@@ -1,0 +1,183 @@
+[
+  {
+    "id": "TC001",
+    "input": "Remind me to submit my assignment tomorrow at 9 PM",
+    "reference_datetime": "2026-11-14T18:30:00+05:30",
+    "expected": {
+      "action": "create",
+      "date": "2026-11-15",
+      "time": "21:00",
+      "status": "scheduled",
+      "duration_minutes": null
+    }
+  },
+  {
+    "id": "TC002",
+    "input": "Remind me to attend the meeting on 20 November 2026 at 10 AM",
+    "reference_datetime": "2026-11-14T18:30:00+05:30",
+    "expected": {
+      "action": "create",
+      "date": "2026-11-20",
+      "time": "10:00",
+      "status": "scheduled",
+      "duration_minutes": null
+    }
+  },
+  {
+    "id": "TC003",
+    "input": "Remind me to call my friend",
+    "reference_datetime": "2026-11-14T18:30:00+05:30",
+    "expected": {
+      "action": "create",
+      "date": null,
+      "time": null,
+      "status": "needs_clarification",
+      "duration_minutes": null
+    }
+  },
+  {
+    "id": "TC004",
+    "input": "Remind me to pay my electricity bill today at 8 PM",
+    "reference_datetime": "2026-11-14T18:30:00+05:30",
+    "expected": {
+      "action": "create",
+      "date": "2026-11-14",
+      "time": "20:00",
+      "status": "scheduled",
+      "duration_minutes": null
+    }
+  },
+  {
+    "id": "TC005",
+    "input": "Remind me to exercise tomorrow morning",
+    "reference_datetime": "2026-11-14T18:30:00+05:30",
+    "expected": {
+      "action": "create",
+      "date": "2026-11-15",
+      "time": null,
+      "status": "needs_clarification",
+      "duration_minutes": null
+    }
+  }
+,
+{
+  "id": "TC006",
+  "input": "Remind me to submit the report on 25 November 2026 at 3 PM",
+  "reference_datetime": "2026-11-14T18:30:00+05:30",
+  "expected": {
+    "action": "create",
+    "date": "2026-11-25",
+    "time": "15:00",
+    "status": "scheduled",
+      "duration_minutes": null
+  }
+},
+{
+  "id": "TC007",
+  "input": "Remind me to take medicine tomorrow at 7 AM",
+  "reference_datetime": "2026-11-14T18:30:00+05:30",
+  "expected": {
+    "action": "create",
+    "date": "2026-11-15",
+    "time": "07:00",
+    "status": "scheduled",
+      "duration_minutes": null
+  }
+},
+{
+  "id": "TC008",
+  "input": "Remind me to buy groceries at 6 PM",
+  "reference_datetime": "2026-11-14T18:30:00+05:30",
+  "expected": {
+    "action": "create",
+    "date": null,
+    "time": "18:00",
+    "status": "needs_clarification",
+      "duration_minutes": null
+  }
+},
+{
+  "id": "TC009",
+  "input": "Remind me to attend the workshop next Friday at 11 AM",
+  "reference_datetime": "2026-11-14T18:30:00+05:30",
+  "expected": {
+    "action": "create",
+    "date": "2026-11-20",
+    "time": "11:00",
+    "status": "scheduled",
+      "duration_minutes": null
+  }
+},
+{
+  "id": "TC010",
+  "input": "Remind me to pay rent on 1 December 2026 at 9 AM",
+  "reference_datetime": "2026-11-14T18:30:00+05:30",
+  "expected": {
+    "action": "create",
+    "date": "2026-12-01",
+    "time": "09:00",
+    "status": "scheduled",
+      "duration_minutes": null
+  }
+},
+{
+  "id": "TC011",
+  "input": "Move my assignment reminder to 22 November 2026 at 10 AM",
+  "reference_datetime": "2026-11-14T18:30:00+05:30",
+  "expected": {
+    "action": "reschedule",
+    "date": "2026-11-22",
+    "time": "10:00",
+    "status": "scheduled",
+      "duration_minutes": null
+  }
+},
+{
+  "id": "TC012",
+  "input": "Reschedule my dentist reminder to tomorrow at 4 PM",
+  "reference_datetime": "2026-11-14T18:30:00+05:30",
+  "expected": {
+    "action": "reschedule",
+    "date": "2026-11-15",
+    "time": "16:00",
+    "status": "scheduled",
+      "duration_minutes": null
+  }
+},
+{
+  "id": "TC013",
+  "input": "Snooze my meeting reminder for 30 minutes",
+  "reference_datetime": "2026-11-14T18:30:00+05:30",
+  "expected": {
+    "action": "snooze",
+    "date": null,
+    "time": null,
+    "status": "needs_clarification",
+    "duration_minutes": 30
+  }
+},
+{
+  "id": "TC014",
+  "input": "Snooze my medication reminder for one hour",
+  "reference_datetime": "2026-11-14T18:30:00+05:30",
+  "expected": {
+    "action": "snooze",
+    "date": null,
+    "time": null,
+    "status": "needs_clarification",
+    "duration_minutes": 60
+  }
+},
+{
+  "id": "TC015",
+  "input": "Remind me to complete my project",
+  "reference_datetime": "2026-11-14T18:30:00+05:30",
+  "expected": {
+    "action": "create",
+    "date": null,
+    "time": null,
+    "status": "needs_clarification",
+      "duration_minutes": null
+  }
+}
+]
